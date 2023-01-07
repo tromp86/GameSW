@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="icon" href="./img/darth_vader.png" />
+    <title>Game Clicker SW</title>
+  </head>
+  <body>
+    <audio id="klikMenu" src="./sound/knopka-klikMenu.wav"></audio>
+    <audio id="klik" preload="auto" src="./sound/knopka-klik.wav"></audio>
+	<img class="tromp86" src="./img/darth_vader.png" alt="" />
+    <main>
+      <span id="background">ClickerGame</span>
+
+<section id="box">
+  <div id="newgame" class="inbox"><a href="./first.html">Game</a></div>
+  <div class="inbox show-modal-window">Score</div>
+</section>
+
+<div class="modal-window hidden">
+  <button class="close-modal-window">&times;</button>
+  <h1 id="clikersScore"></h1>
+  <p>You Score The result of the game for all time</p>
+  <button id="clearClikersScore" onclick="deleteItems()">clear Score</button>
+</div>
+<div class="overlay hidden"></div>
+    </main>
+    <script defer src="./script/script.js"></script>
+    <script defer src="./script/score.js"></script>
+  </body>
+</html>
