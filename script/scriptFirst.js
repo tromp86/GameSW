@@ -378,7 +378,7 @@ let counter = 0;
 function timerId() {
   counter++;
   timerHeart();
-    if (counter === 13) {
+    if (counter === 14) {
         clearInterval(timerID);
       }
 }
