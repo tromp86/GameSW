@@ -321,7 +321,7 @@ function getLive (){
   }
   soundClick();
   let countLiveHp = parseInt(hp.style.width);
-  countLiveHp += getRandomValue(14, 28);
+  countLiveHp += getRandomValue(14, 30);
   hp.style.width = `${countLiveHp}%`;
   event.preventDefault();
 }
@@ -332,7 +332,7 @@ function getLive (){
 
 function attackPlayer () {
   let count = parseInt(hp.style.width);
-  count -= getRandomValue(1, 8);
+  count -= getRandomValue(1, 9);
   hp.style.width = `${count}%`;
   if ( count <= 0 ) {
     newGame();
@@ -378,8 +378,8 @@ let counter = 0;
 function timerId() {
   counter++;
   timerHeart();
-    if (counter === 11) {
+    if (counter === 13) {
         clearInterval(timerID);
-      } 
+      }
 }
 let timerID = setInterval(timerId, 8234);
