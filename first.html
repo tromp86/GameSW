@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/style-first.css" />
+	<link rel="icon" href="./img/darth_vader.png">
+  <title>Play game</title>
+
+</head>
+<body id="forest-wrap" class="forest-1">
+  <audio id="audio" src="./sound/cinematic-3.mp3" controls></audio>
+  <audio id="hit" src="./sound/katana swing.wav"></audio>
+  <audio id="likeHp" src="./sound/likehp.wav"></audio>
+  <audio id="vush" src="./sound/monster.wav"></audio>
+  <audio id="aga" src="./sound/ahhhaa.wav"></audio>
+  <audio id="wine" src="./sound/youWine.wav"></audio>
+  <audio id="over" src="./sound/gameOver.wav"></audio>
+
+<button id="play">play</button>
+<button id="mute">Mute</button>
+
+<section class="game hidden">
+  <div class="center"></div>
+</section>
+<span class="tooltiptext">contextmenu</span>
+<div class="wraplivePlayer">
+<div id="hp">
+  <span id="hpPrecent"></span>
+</div>
+</div>
+
+<div class="wraplive">
+<section class="container">
+  <div class="loadlive">
+      <span id="loadtext"></span>
+  </div>
+</section>
+  <img id="Goom" class="" src="./img-monsters/25.png" alt="" onclick="CliLocal(),Clicked(),firstLevel()">
+  <img id="Monsteroso" class="hidden" src="./img-monsters/24.png" alt="" onclick="CliLocal(),Clicked(),firstLevel()">
+  <img id="Rorgg" class="hidden" src="./img-monsters/29.png" alt="" onclick="CliLocal(),Clicked(),firstLevel()">
+  <img id="Sporr" class="hidden" src="./img-monsters/26.png" alt="" onclick="CliLocal(),Clicked(),firstLevel()">
+  <img id="Zzutak" class="hidden" src="./img-monsters/27.png" alt="" onclick="CliLocal(),Clicked(),firstLevel()">
+  <img id="Miclas" class="hidden" src="./img-monsters/28.png" alt="" onclick="CliLocal(),Clicked(),firstLevel()">
+</div>
+<div class="app"></div>
+
+<div class="clikersAll">
+  <img onclick="firstLevel()" class="appLevel hidden2" src="./img/level-up.png" alt="Level"/>
+  <h2 id="clikers"></h2>
+  <div id="firstLevel"></div>
+</div>
+
+    <script defer src="./script/scriptFirst.js"></script>
+    <script defer src="./script/score.js"></script>
+</body>
+</html>
