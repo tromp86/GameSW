@@ -9,4 +9,6 @@
 
 4. Please use the context menu function
 
+5. An observer is running in the console
+
 You can write to me [telegram](https://t.me/tromp86)
