@@ -45,7 +45,6 @@ const Sporr = factory.create('Sporr');
 const Zzutak = factory.create('Zzutak');
 const Miclas = factory.create('Miclas');
 
-
 const randomMonster = () => {
   const code = [];
   code.push(Goom.liveHp, Monsteroso.liveHp, Rorgg.liveHp, Sporr.liveHp, Zzutak.liveHp, Miclas.liveHp);
@@ -70,6 +69,8 @@ const loadtext = document.getElementById('loadtext');
 document.getElementById('loadtext').textContent = randomMonster();
 const wraplive = document.querySelector('.wraplive');
 const wraplivePlayer = document.querySelector('.wraplivePlayer');
+
+
 function soundClick() {
   let audio = new Audio(); 
   audio.src = './sound/katana swing.wav'; 
@@ -81,8 +82,10 @@ const newGame = function() {
   newGame.innerHTML = '<a href="./index.html">Let`s play a new game</a>';
 document.body.appendChild(newGame);
 }
+
 // ____attackMonster
 function attackMonsterGoom () {
+
   const forest = document.querySelector('#forest-wrap');
   forest.classList.add('forest-1');
   soundClick();
@@ -93,8 +96,10 @@ function attackMonsterGoom () {
     loadtext.textContent = `${count}%`;
     if(live1.style.width <= `${25}%`){
       loadtext.style.visibility = 'hidden';
+
     };
     if ( count <= 0 ) {
+      monsterosoMonster.setNews('I will kill you');
       vush.play();
       live1.style.width = randomMonster(); 
       attackMonsterMonsteroso();
@@ -130,6 +135,7 @@ soundClick();
     loadtext.style.visibility = 'hidden';
   };
   if  (count <= 0 ) {
+rorggMonster.setNews('i see you ha-ha-ha');
     vush.play();
     live2.style.width = randomMonster(); 
     attackMonsterRorgg();
@@ -166,6 +172,7 @@ soundClick();
     loadtext.style.visibility = 'hidden';
   }
   if ( count <= 0 ) {
+sporrMonster.setNews('You failed me last time :(');
     vush.play();
     live3.style.width = randomMonster();
     attackMonsterSporr(); 
@@ -201,6 +208,7 @@ soundClick();
     loadtext.style.visibility = 'hidden';
   }
   if ( count <= 0 ) {
+zzutakMonster.setNews('I have a bad feeling about this.');
     vush.play();
     live4.style.width = randomMonster();
     attackMonsterZzutak();
@@ -236,6 +244,7 @@ soundClick();
     loadtext.style.visibility = 'hidden';
   }
   if ( count <= 0 ) {
+    miclasMonster.setNews('I was only a student; now i`m the owner');
     aga.play();
     vush.play();
     live5.style.width = randomMonster();
@@ -334,6 +343,9 @@ function attackPlayer () {
   let count = parseInt(hp.style.width);
   count -= getRandomValue(1, 9);
   hp.style.width = `${count}%`;
+  if (count < 28) {
+    myPersonObivan.setNews('you have little health');
+  }
   if ( count <= 0 ) {
     newGame();
     myVid.volume = 0.00;
@@ -382,4 +394,4 @@ function timerId() {
         clearInterval(timerID);
       }
 }
-let timerID = setInterval(timerId, 8234);
+let timerID = setInterval(timerId, 7777);
